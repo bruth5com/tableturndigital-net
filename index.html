@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design & Lead Generation for NW Pennsylvania Contractors | TableTurn Digital</title>
+<meta name="description" content="Web design, local SEO and exclusive lead generation for contractors across Venango, Crawford, Butler & Mercer Counties PA. Real leads, not shared. Call (814) 209-8304.">
+<link rel="canonical" href="https://tableturndigital.net/" />
+<meta property="og:title" content="Web Design & Lead Generation for NW Pennsylvania Contractors | TableTurn Digital" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tableturndigital.net/" />
+<meta property="og:description" content="Web design, local SEO and exclusive lead generation for contractors across NW Pennsylvania. Real leads, not shared. Call (814) 209-8304." />
+<meta property="og:image" content="https://tableturndigital.net/og-image.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #141414;
+    --charcoal: #2A2A2A;
+    --warm: #B5712A;
+    --warm-light: #D4914E;
+    --gold: #C9A84C;
+    --cream: #F8F4EE;
+    --fog: #EDEBE6;
+    --muted: #5c5550;
+    --border: #E0DBD3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; background: rgba(20,20,20,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: white; letter-spacing: 0.5px; text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.78rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); text-decoration: underline; }
+  .nav-links a:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .nav-cta { background: var(--warm) !important; color: white !important; padding: 10px 22px; font-size: 0.75rem !important; letter-spacing: 1.5px; }
+  .nav-cta:hover { background: var(--warm-light) !important; }
+
+  /* HERO */
+  .hero { min-height: 100vh; background: var(--ink); position: relative; display: flex; align-items: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(181,113,42,0.12) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 50%), linear-gradient(160deg, #1A1410 0%, #141414 100%); }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%); }
+  .hero-inner { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 120px 40px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 28px; }
+  .hero-eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 400; color: white; line-height: 1.08; margin-bottom: 28px; letter-spacing: -0.5px; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.75; font-weight: 300; margin-bottom: 44px; max-width: 440px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--warm); color: white; padding: 15px 30px; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; text-decoration: underline; text-decoration-color: transparent; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--warm-light); text-decoration-color: white; }
+  .btn-primary:focus { outline: 3px solid var(--warm-light); outline-offset: 2px; }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); padding: 15px 30px; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; text-decoration: underline; text-decoration-color: transparent; transition: all 0.2s; }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); text-decoration-color: var(--gold); }
+  .btn-secondary:focus { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .stat-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); padding: 32px 28px; transition: background 0.2s; }
+  .stat-card:hover { background: rgba(255,255,255,0.07); }
+  .stat-card:first-child { grid-column: span 2; background: rgba(181,113,42,0.12); border-color: rgba(181,113,42,0.2); }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+  .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.65); letter-spacing: 1px; text-transform: uppercase; font-weight: 400; line-height: 1.5; }
+  .stat-card:first-child .stat-num { font-size: 1.6rem; color: white; }
+  .stat-card:first-child .stat-label { color: rgba(255,255,255,0.75); font-size: 0.85rem; letter-spacing: 0; text-transform: none; line-height: 1.6; }
+
+  .trust-bar { background: var(--warm); padding: 16px 40px; }
+  .trust-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
+  .trust-item { color: white; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+  .trust-item::before { content: '✓'; font-weight: 700; }
+
+  section { padding: 100px 40px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--warm); font-weight: 500; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--warm); }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; color: var(--ink); line-height: 1.15; margin-bottom: 16px; }
+  .section-sub { color: var(--muted); font-size: 0.95rem; line-height: 1.75; font-weight: 300; max-width: 520px; }
+
+  .services { background: white; }
+  .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 60px; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .service-card { background: var(--fog); padding: 44px 36px; transition: background 0.2s; position: relative; overflow: hidden; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--warm); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: var(--cream); }
+  .service-icon { font-size: 2rem; margin-bottom: 20px; display: block; }
+  .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: 12px; line-height: 1.2; }
+  .service-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; font-weight: 300; margin-bottom: 20px; }
+  .service-price { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--warm); font-weight: 600; }
+
+  .how { background: var(--ink); }
+  .how .section-title { color: white; }
+  .how .section-sub { color: rgba(255,255,255,0.65); }
+  .how .section-eyebrow { color: var(--gold); }
+  .how .section-eyebrow::before { background: var(--gold); }
+  .how-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 70px; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+  .step { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); padding: 36px 28px; position: relative; }
+  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: rgba(255,255,255,0.08); line-height: 1; margin-bottom: 20px; }
+  .step h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 10px; }
+  .step p { font-size: 0.83rem; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300; }
+
+  .why { background: var(--cream); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .why-points { margin-top: 40px; }
+  .why-point { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+  .why-point:first-child { border-top: 1px solid var(--border); }
+  .why-point-num { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--warm); font-weight: 600; flex-shrink: 0; width: 28px; padding-top: 2px; }
+  .why-point-content h4 { font-size: 0.9rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.3px; }
+  .why-point-content p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+  .why-visual { background: var(--ink); padding: 56px 48px; position: relative; overflow: hidden; }
+  .why-visual::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(181,113,42,0.2), transparent 70%); }
+  .why-visual-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; margin-bottom: 32px; }
+  .coverage-list { list-style: none; }
+  .coverage-list li { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: rgba(255,255,255,0.75); font-size: 0.9rem; font-weight: 300; display: flex; align-items: center; gap: 12px; }
+  .coverage-list li::before { content: ''; width: 6px; height: 6px; background: var(--warm); border-radius: 50%; flex-shrink: 0; }
+  .coverage-list li strong { color: white; font-weight: 500; }
+
+  .contact { background: var(--fog); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
+  .contact-info { padding-top: 10px; }
+  .contact-detail { display: flex; align-items: center; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; font-weight: 300; }
+  .contact-detail strong { color: var(--ink); font-weight: 500; }
+  .contact-detail a { color: var(--warm); text-decoration: underline; }
+  .contact-detail a:hover { color: var(--warm-light); }
+  .form-card { background: white; padding: 48px; box-shadow: 0 8px 48px rgba(0,0,0,0.06); border: 1px solid var(--border); }
+  .form-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+  .form-sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 32px; font-weight: 300; }
+  .f-row { margin-bottom: 18px; }
+  .f-row label { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 7px; }
+  .f-row input, .f-row select, .f-row textarea { width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink); background: var(--cream); outline: none; transition: border-color 0.2s; appearance: none; }
+  .f-row input:focus, .f-row select:focus, .f-row textarea:focus { border-color: var(--warm); background: white; }
+  .f-row textarea { resize: vertical; min-height: 100px; }
+  .f-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .submit-btn { width: 100%; background: var(--ink); color: white; border: none; padding: 16px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 6px; }
+  .submit-btn:hover { background: var(--warm); }
+  .form-note { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 12px; font-weight: 300; font-style: italic; }
+
+  /* ABOUT SECTION */
+  .about-section { background: white; padding: 100px 40px; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: center; }
+  .about-img-wrap { position: relative; }
+  .about-img-bg { position: absolute; top: -16px; left: -16px; right: 16px; bottom: 16px; background: var(--warm); opacity: 0.12; }
+  .about-img { width: 100%; height: 500px; object-fit: cover; object-position: top; position: relative; z-index: 1; display: block; }
+  .about-caption { position: absolute; bottom: 0; left: 0; right: 0; background: var(--ink); padding: 20px 24px; z-index: 2; }
+  .about-caption-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 2px; }
+  .about-caption-title { font-size: 0.75rem; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; }
+  .about-stats { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 36px; }
+  .about-stat { text-align: center; padding: 20px 28px; background: var(--fog); border: 1px solid var(--border); }
+  .about-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; color: var(--warm); }
+  .about-stat-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .about-text { color: var(--muted); font-size: 0.95rem; line-height: 1.85; font-weight: 300; margin-bottom: 20px; }
+  .about-text strong { color: var(--ink); }
+
+  /* BLOG */
+  .blog-section { background: var(--fog); padding: 80px 40px; }
+  .blog-inner { max-width: 1200px; margin: 0 auto; }
+  .blog-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .blog-card { display: block; background: white; border: 1px solid var(--border); padding: 32px; text-decoration: underline; text-decoration-color: transparent; color: var(--ink); transition: box-shadow 0.2s; }
+  .blog-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-decoration-color: var(--warm); }
+  .blog-card:focus { outline: 3px solid var(--warm); outline-offset: 2px; }
+  .blog-tag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--warm); font-weight: 500; margin-bottom: 12px; }
+  .blog-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 12px; line-height: 1.3; }
+  .blog-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 16px; }
+  .blog-read { font-size: 0.82rem; color: var(--warm); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; text-decoration: underline; }
+  .blog-all { margin-top: 24px; text-align: center; }
+  .blog-all a { font-size: 0.82rem; color: var(--warm); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; text-decoration: underline; }
+  .blog-all a:hover { color: var(--warm-light); }
+
+  /* TESTIMONIAL */
+  .testimonial-section { background: var(--fog); padding: 80px 40px; }
+  .testimonial-inner { max-width: 860px; margin: 0 auto; }
+  .testimonial-card { background: white; border: 1px solid var(--border); border-left: 4px solid var(--warm); padding: 40px 44px; position: relative; }
+  .testimonial-stars { color: #b36a00; font-size: 1.2rem; margin-bottom: 18px; }
+  .testimonial-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 1.85; color: var(--charcoal); font-style: italic; font-weight: 400; margin-bottom: 24px; }
+  .testimonial-author { font-size: 0.85rem; font-weight: 600; color: var(--ink); letter-spacing: 0.5px; }
+  .testimonial-role { font-weight: 400; color: var(--muted); }
+
+  /* LEAD NETWORKS */
+  .networks-section { background: #1a1a2e; padding: 80px 40px; }
+  .networks-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+  .networks-eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 12px; font-family: Arial, sans-serif; }
+  .networks-title { font-family: Georgia, serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: white; margin-bottom: 16px; font-weight: 700; }
+  .networks-sub { color: rgba(255,255,255,0.65); font-size: 0.95rem; max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
+  .networks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left; }
+  .network-card { display: block; background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.25); padding: 28px 24px; text-decoration: underline; text-decoration-color: transparent; color: white; transition: background 0.2s; }
+  .network-card:hover { background: rgba(255,255,255,0.09); text-decoration-color: #C9A84C; }
+  .network-card:focus { outline: 3px solid #C9A84C; outline-offset: 2px; }
+  .network-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+  .network-card h3 { font-family: Georgia, serif; font-size: 1rem; color: white; margin-bottom: 8px; font-weight: 700; }
+  .network-card p { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+  .network-cta { margin-top: 12px; font-size: 0.78rem; color: #C9A84C; letter-spacing: 1px; text-transform: uppercase; text-decoration: underline; }
+
+  footer { background: var(--ink); padding: 40px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: white; }
+  .footer-logo span { color: var(--gold); }
+  footer p { color: rgba(255,255,255,0.5); font-size: 0.78rem; font-weight: 300; }
+  footer a { color: var(--warm); text-decoration: underline; font-size: 0.78rem; }
+  footer a:hover { color: var(--warm-light); }
+
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero-inner { grid-template-columns: 1fr; gap: 50px; padding: 100px 24px 60px; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .services-header { grid-template-columns: 1fr; gap: 20px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .how-header { grid-template-columns: 1fr; gap: 20px; }
+    .why-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-card { padding: 30px 24px; }
+    .f-grid { grid-template-columns: 1fr; }
+    section { padding: 70px 24px; }
+    .trust-bar { padding: 14px 24px; }
+    .trust-bar-inner { gap: 20px; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "TableTurn Digital",
+  "description": "Web design, local SEO and exclusive lead generation for contractors and small businesses in northwest Pennsylvania.",
+  "url": "https://tableturndigital.net",
+  "telephone": "+18142098304",
+  "founder": {
+    "@type": "Person",
+    "name": "Bret Ruth"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Franklin",
+    "addressRegion": "PA",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Venango County PA","Crawford County PA","Warren County PA","Forest County PA","Clarion County PA","Butler County PA","Mercer County PA"]
+}
+</script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;background:var(--warm);color:white;padding:8px 16px;z-index:999;font-size:0.9rem;">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="TableTurn Digital — Home">
+    <img src="tableturndigital-logo.svg" alt="TableTurn Digital" style="height:44px;width:auto;display:block;">
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="#contact" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">NW Pennsylvania · Local Business Growth</p>
+        <h1 id="hero-heading">Digital Services That Turn <em>Clicks</em> Into Customers.</h1>
+        <p class="hero-sub">We help local businesses across Venango, Crawford, Warren, Forest, Clarion, Butler and Mercer Counties get found online, generate qualified leads, and grow — without the guesswork.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Get a Free Consultation</a>
+          <a href="#services" class="btn-secondary">See Our Services</a>
+        </div>
+      </div>
+      <div class="hero-stats" aria-label="TableTurn Digital at a glance">
+        <div class="stat-card">
+          <div class="stat-num">20+ Years</div>
+          <div class="stat-label">of hospitality and client-facing experience — we understand what local businesses actually need to grow.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7</div>
+          <div class="stat-label">Counties Served Across NW Pennsylvania</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Core Niches: Roofing, HVAC, Landscaping &amp; Construction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar" aria-label="Our commitments">
+    <div class="trust-bar-inner">
+      <span class="trust-item">Local Lead Generation</span>
+      <span class="trust-item">Custom Website Design</span>
+      <span class="trust-item">NW Pennsylvania Focused</span>
+      <span class="trust-item">Real Results, No Fluff</span>
+    </div>
+  </div>
+
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="section-inner">
+      <div class="services-header">
+        <div>
+          <p class="section-eyebrow">What We Do</p>
+          <h2 class="section-title" id="services-heading">Web Design, Local SEO &amp; Lead Generation for NW Pennsylvania Businesses</h2>
+        </div>
+        <p class="section-sub">From building your digital presence to delivering qualified leads straight to your phone — we handle the online side so you can focus on the work.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">🌐</span>
+          <h3>Website Design &amp; Development</h3>
+          <p>Custom-built websites designed to convert visitors into calls and quote requests. Fast, mobile-friendly, and optimized for local search.</p>
+          <span class="service-price">Starting at $500</span>
+        </div>
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">📞</span>
+          <h3>Local Lead Generation</h3>
+          <p>We run targeted lead capture sites for roofing, HVAC, landscaping and construction contractors across NW Pennsylvania. Tired of paying for shared HomeAdvisor leads? Our exclusive leads go to one contractor — you.</p>
+          <span class="service-price">Pay Per Lead</span>
+        </div>
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">🔍</span>
+          <h3>Local SEO &amp; Online Visibility</h3>
+          <p>Get found when local customers search for your services. We optimize your site and Google presence so you show up where it counts.</p>
+          <span class="service-price">Starting at $99/mo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-heading">
+    <div class="section-inner">
+      <div class="how-header">
+        <div>
+          <p class="section-eyebrow">The Process</p>
+          <h2 class="section-title" id="how-heading">Simple. Transparent. Results-Driven.</h2>
+        </div>
+        <p class="section-sub">We keep it straightforward — no confusing packages, no hidden fees, no runaround. Just clear communication and real outcomes.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step-num" aria-hidden="true">01</div><h4>Free Consultation</h4><p>We talk about your business, your goals, and where you're losing customers online. No pressure, no pitch.</p></div>
+        <div class="step"><div class="step-num" aria-hidden="true">02</div><h4>Custom Plan</h4><p>We put together a clear, honest plan — whether that's a new website, lead gen, SEO, or all three.</p></div>
+        <div class="step"><div class="step-num" aria-hidden="true">03</div><h4>We Build &amp; Launch</h4><p>Fast turnaround. Your site or lead system goes live quickly — and we handle all the technical details.</p></div>
+        <div class="step"><div class="step-num" aria-hidden="true">04</div><h4>Leads Come In</h4><p>Qualified local customers start finding you. You focus on doing the work — we keep the pipeline full.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why" aria-labelledby="why-heading">
+    <div class="section-inner">
+      <div class="why-grid">
+        <div>
+          <p class="section-eyebrow">Why TableTurn Digital</p>
+          <h2 class="section-title" id="why-heading">Built for NW Pennsylvania. By Someone Who Knows It.</h2>
+          <div class="why-points">
+            <div class="why-point"><span class="why-point-num" aria-hidden="true">01</span><div class="why-point-content"><h4>We're Local — Not a Faceless Agency</h4><p>Based in Venango County, we know the towns, the trades, and the people. Your customers are our neighbors.</p></div></div>
+            <div class="why-point"><span class="why-point-num" aria-hidden="true">02</span><div class="why-point-content"><h4>20+ Years of Client Communication</h4><p>A career in hospitality built on trust, rapport, and follow-through. We treat your business like it matters — because it does.</p></div></div>
+            <div class="why-point"><span class="why-point-num" aria-hidden="true">03</span><div class="why-point-content"><h4>We Only Win When You Win</h4><p>Our lead gen model is built on results. If the leads aren't coming in, we don't get paid. That keeps us accountable.</p></div></div>
+            <div class="why-point"><span class="why-point-num" aria-hidden="true">04</span><div class="why-point-content"><h4>Straight Talk, No Runaround</h4><p>Clear pricing, honest timelines, and real communication. You'll always know where things stand.</p></div></div>
+          </div>
+        </div>
+        <div class="why-visual" aria-label="Service area coverage">
+          <p class="why-visual-title">Service Area</p>
+          <ul class="coverage-list">
+            <li><strong>Venango County</strong> — Franklin, Oil City (Home Base)</li>
+            <li><strong>Crawford County</strong> — Meadville (Northwest)</li>
+            <li><strong>Warren County</strong> — Warren (North)</li>
+            <li><strong>Forest County</strong> — Tionesta (Northeast)</li>
+            <li><strong>Clarion County</strong> — Clarion (East)</li>
+            <li><strong>Butler County</strong> — Butler (South)</li>
+            <li><strong>Mercer County</strong> — Mercer (West)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about" aria-labelledby="about-heading">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <div class="about-img-bg" aria-hidden="true"></div>
+          <img src="profile.jpeg" alt="Bret Ruth, Founder of TableTurn Digital, NW Pennsylvania digital marketing" class="about-img">
+          <div class="about-caption">
+            <p class="about-caption-name">Bret Ruth</p>
+            <p class="about-caption-title">Founder · TableTurn Digital</p>
+          </div>
+        </div>
+        <div>
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-title" id="about-heading">A Local Guy Who Speaks Both Languages — Business &amp; Digital.</h2>
+          <p class="about-text" style="margin-top:28px;">I'm Bret Ruth, founder of TableTurn Digital and a lifelong people person. I spent over 20 years in hospitality — working with prestigious establishments like <strong>Joe's Stone Crab</strong> and the iconic <strong>Watergate Hotel</strong> in Washington D.C. — learning how to read people quickly, build trust in fast-paced environments, and communicate clearly when it matters most.</p>
+          <p class="about-text">I started TableTurn Digital because I kept seeing the same problem: great local contractors and service businesses in NW Pennsylvania doing excellent work — but invisible online. No website, no leads, no digital presence.</p>
+          <p class="about-text">My mission is simple — help honest, hardworking local businesses get found, get calls, and grow. No corporate runaround, no confusing packages. Just straight talk and real results from someone who lives and works right here in Venango County.</p>
+          <div class="about-stats">
+            <div class="about-stat"><p class="about-stat-num">20+</p><p class="about-stat-label">Years Experience</p></div>
+            <div class="about-stat"><p class="about-stat-num">7</p><p class="about-stat-label">Counties Served</p></div>
+            <div class="about-stat"><p class="about-stat-num">100%</p><p class="about-stat-label">Local Focus</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-section" id="blog" aria-labelledby="blog-heading">
+    <div class="blog-inner">
+      <p class="section-eyebrow">From The Blog</p>
+      <h2 class="section-title" id="blog-heading">Straight Talk for NW Pennsylvania Contractors</h2>
+      <div class="blog-grid">
+        <a href="/blog-lead-gen-expectations" class="blog-card">
+          <p class="blog-tag">Lead Generation</p>
+          <h3>What Should I Expect From a Lead Generation Service?</h3>
+          <p>Before you hand over a dollar to anyone, you deserve a straight answer. Here is what local lead generation for contractors actually looks like.</p>
+          <span class="blog-read">Read More →</span>
+        </a>
+      </div>
+      <div class="blog-all">
+        <a href="/blog">View All Posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-title" id="contact-heading">Let's Talk About Growing Your Business</h2>
+          <p class="section-sub" style="margin-bottom:40px;">Whether you're a contractor looking for leads or a business that needs a better website — reach out and let's find the right fit.</p>
+          <div class="contact-detail"><span aria-hidden="true">📞</span> <div><strong>Phone</strong><br><a href="tel:8142098304">(814) 209-8304</a></div></div>
+          <div class="contact-detail"><span aria-hidden="true">🌐</span> <div><strong>Website</strong><br><a href="https://tableturndigital.net">tableturndigital.net</a></div></div>
+          <div class="contact-detail"><span aria-hidden="true">📍</span> <div><strong>Location</strong><br>Franklin, PA · Venango County</div></div>
+          <div class="contact-detail"><span aria-hidden="true">🕐</span> <div><strong>Response Time</strong><br>Within 24 hours</div></div>
+        </div>
+        <div class="form-card">
+          <h3 class="form-title">Send Us a Message</h3>
+          <p class="form-sub">Tell us a little about your business and what you're looking for.</p>
+          <form action="https://formspree.io/f/mjgqyred" method="POST">
+            <div class="f-grid">
+              <div class="f-row"><label for="first_name">First Name</label><input type="text" id="first_name" name="first_name" placeholder="John" required></div>
+              <div class="f-row"><label for="last_name">Last Name</label><input type="text" id="last_name" name="last_name" placeholder="Smith" required></div>
+            </div>
+            <div class="f-row"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(814) 555-0100" required></div>
+            <div class="f-row"><label for="business_type">Business Type</label>
+              <select id="business_type" name="business_type">
+                <option value="">Select one...</option>
+                <option>Roofing Contractor</option>
+                <option>HVAC Contractor</option>
+                <option>Landscaping / Property Care</option>
+                <option>Other Trade or Service Business</option>
+                <option>I Need a Website</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="f-row"><label for="service_interest">What Are You Looking For?</label>
+              <select id="service_interest" name="service_interest">
+                <option value="">Select one...</option>
+                <option>Buy Local Leads</option>
+                <option>New Website Design</option>
+                <option>Local SEO Help</option>
+                <option>All of the Above</option>
+                <option>Not Sure Yet — Just Exploring</option>
+              </select>
+            </div>
+            <div class="f-row"><label for="message">Message (Optional)</label>
+              <textarea id="message" name="message" placeholder="Tell us a little about your business and what you need..."></textarea>
+            </div>
+            <button class="submit-btn" type="submit">Send Message →</button>
+            <p class="form-note">We'll respond within 24 hours. Your info is never shared or sold.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section" aria-labelledby="testimonial-heading">
+    <div class="testimonial-inner">
+      <p class="section-eyebrow">Social Proof</p>
+      <h2 class="section-title" id="testimonial-heading">A Word From a Former Colleague</h2>
+      <div class="testimonial-card" style="margin-top:40px;">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote class="testimonial-quote">"I worked with Bret during his time in hospitality management and watched him handle everything from high-pressure service situations to difficult guests with the same calm, professional approach every time. He had a way of making people feel taken care of without ever making it feel like a transaction. His team respected him because he led by example — he never asked anyone to do something he wouldn't do himself. If you're looking for someone who knows how to represent your business with integrity and actually connects with people, Bret is that person."</blockquote>
+        <p class="testimonial-author">— Jason T., <span class="testimonial-role">Former Hospitality Manager</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="networks-section" id="lead-networks" aria-labelledby="networks-heading">
+    <div class="networks-inner">
+      <p class="networks-eyebrow">Our Lead Networks</p>
+      <h2 class="networks-title" id="networks-heading">We Also Operate Local Lead Sites Across NW Pennsylvania</h2>
+      <p class="networks-sub">Homeowners across Venango, Crawford, Warren and surrounding counties use our niche lead sites to connect with trusted local contractors.</p>
+      <div class="networks-grid">
+        <a href="https://nwpa-roofing-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+          <span class="network-icon" aria-hidden="true">🏠</span>
+          <h3>Roofing Leads</h3>
+          <p>Storm damage, roof replacement, leak repair.</p>
+          <p class="network-cta">Visit Site →</p>
+        </a>
+        <a href="https://nwpa-hvac-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+          <span class="network-icon" aria-hidden="true">🌡️</span>
+          <h3>HVAC Leads</h3>
+          <p>Furnace repair, AC installation, emergency service.</p>
+          <p class="network-cta">Visit Site →</p>
+        </a>
+        <a href="https://nwpa-landscaping-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+          <span class="network-icon" aria-hidden="true">🌿</span>
+          <h3>Landscaping Leads</h3>
+          <p>Lawn care, tree removal, snow removal.</p>
+          <p class="network-cta">Visit Site →</p>
+        </a>
+        <a href="https://nwpa-construction-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+          <span class="network-icon" aria-hidden="true">🔨</span>
+          <h3>Contracting &amp; Handyman</h3>
+          <p>Decks, siding, remodeling, handyman services.</p>
+          <p class="network-cta">Visit Site →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">TableTurn<span>Digital</span></div>
+    <p>© 2026 TableTurn Digital · Franklin, PA · Venango County</p>
+    <a href="tel:8142098304">(814) 209-8304</a>
+  </div>
+</footer>
+
+</body>
+</html>

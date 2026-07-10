@@ -1,0 +1,26 @@
+<svg width="400" height="200" viewBox="0 0 400 200" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>TableTurn Digital Logo</title>
+<desc>TableTurn Digital logo — dark version</desc>
+
+<!-- Background -->
+<rect x="0" y="0" width="400" height="200" rx="4" fill="#141414"/>
+
+<!-- Geometric Mark -->
+<g transform="translate(80, 100)">
+  <polygon points="0,-52 52,0 0,52 -52,0" fill="#B5712A"/>
+  <polygon points="0,-36 36,0 0,36 -36,0" fill="#141414"/>
+  <polygon points="0,-20 20,0 0,20 -20,0" fill="#C9A84C"/>
+  <circle cx="0" cy="0" r="6" fill="#141414"/>
+</g>
+
+<!-- Wordmark -->
+<text x="155" y="88" fill="#F8F4EE" font-family="Georgia, serif" font-size="30" font-weight="700" letter-spacing="0.5">Table<tspan fill="#C9A84C">Turn</tspan></text>
+<text x="155" y="116" fill="#F8F4EE" font-family="Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="4" opacity="0.8">DIGITAL</text>
+
+<!-- Divider -->
+<line x1="155" y1="128" x2="355" y2="128" stroke="#C9A84C" stroke-width="1"/>
+
+<!-- Tagline -->
+<text x="155" y="146" fill="#C9A84C" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">NW PENNSYLVANIA</text>
+
+</svg>
