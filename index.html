@@ -23,6 +23,7 @@
     --fog: #EDEBE6;
     --muted: #5c5550;
     --border: #E0DBD3;
+    --warm-dark: #9c6124;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -74,8 +75,8 @@
 
   section { padding: 100px 40px; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
-  .section-eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--warm); font-weight: 500; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
-  .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--warm); }
+  .section-eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--warm-dark); font-weight: 500; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--warm-dark); }
   .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; color: var(--ink); line-height: 1.15; margin-bottom: 16px; }
   .section-sub { color: var(--muted); font-size: 0.95rem; line-height: 1.75; font-weight: 300; max-width: 520px; }
 
@@ -90,10 +91,6 @@
   .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: 12px; line-height: 1.2; }
   .service-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; font-weight: 300; margin-bottom: 20px; }
   .service-price { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--warm); font-weight: 600; }
-  .service-card { display: flex; flex-direction: column; }
-  .service-link { margin-top: 16px; color: var(--warm); font-weight: 600; font-size: 0.82rem; text-decoration: none; letter-spacing: 0.3px; }
-  .service-link:hover, .service-link:focus { text-decoration: underline; outline: none; }
-  .service-link:focus { outline: 3px solid var(--warm); outline-offset: 2px; }
 
   .how { background: var(--ink); }
   .how .section-title { color: white; }
@@ -321,21 +318,18 @@
           <h3>Website Design &amp; Development</h3>
           <p>Custom-built websites designed to convert visitors into calls and quote requests. Fast, mobile-friendly, and optimized for local search.</p>
           <span class="service-price">Starting at $500</span>
-          <a class="service-link" href="/website-design-and-development.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">📞</span>
           <h3>Local Lead Generation</h3>
           <p>We run targeted lead capture sites for roofing, HVAC, landscaping and construction contractors across NW Pennsylvania. Tired of paying for shared HomeAdvisor leads? Our exclusive leads go to one contractor — you.</p>
           <span class="service-price">Pay Per Lead</span>
-          <a class="service-link" href="/local-lead-generation.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">🔍</span>
           <h3>Local SEO &amp; Online Visibility</h3>
           <p>Get found when local customers search for your services. We optimize your site and Google presence so you show up where it counts.</p>
           <span class="service-price">Starting at $99/mo</span>
-          <a class="service-link" href="/local-seo-and-online-visibility.html">Learn More &rarr;</a>
         </div>
       </div>
     </div>
