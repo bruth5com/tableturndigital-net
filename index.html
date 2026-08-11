@@ -222,6 +222,10 @@
     .trust-bar-inner { gap: 20px; }
     .footer-inner { flex-direction: column; text-align: center; }
   }
+/* Accessibility: visible keyboard focus and minimum interactive target size. */
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid #0b63ce; outline-offset: 3px; box-shadow: 0 0 0 2px #fff; }
+:where(button, input:not([type="checkbox"]):not([type="radio"]), select) { min-height: 44px; }
+@media (pointer: coarse) { nav a, a[class*="btn"] { display: inline-flex; align-items: center; min-height: 44px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -393,7 +397,7 @@
       <div class="about-grid">
         <div class="about-img-wrap">
           <div class="about-img-bg" aria-hidden="true"></div>
-          <img src="profile.jpeg" alt="Bret Ruth, Founder of TableTurn Digital, NW Pennsylvania digital marketing" class="about-img">
+    <img src="profile.jpeg" alt="Bret Ruth, Founder of TableTurn Digital, NW Pennsylvania digital marketing" class="about-img" width="1024" height="1024" loading="lazy" decoding="async">
           <div class="about-caption">
             <p class="about-caption-name">Bret Ruth</p>
             <p class="about-caption-title">Founder · TableTurn Digital</p>
