@@ -450,10 +450,10 @@
           <p class="form-sub">Tell us a little about your business and what you're looking for.</p>
           <form action="https://formspree.io/f/mjgqyred" method="POST">
             <div class="f-grid">
-              <div class="f-row"><label for="first_name">First Name</label><input type="text" id="first_name" name="first_name" placeholder="John" required></div>
-              <div class="f-row"><label for="last_name">Last Name</label><input type="text" id="last_name" name="last_name" placeholder="Smith" required></div>
+              <div class="f-row"><label for="first_name">First Name</label><input type="text" id="first_name" name="first_name" autocomplete="given-name" placeholder="John" required></div>
+              <div class="f-row"><label for="last_name">Last Name</label><input type="text" id="last_name" name="last_name" autocomplete="family-name" placeholder="Smith" required></div>
             </div>
-            <div class="f-row"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(814) 555-0100" required></div>
+            <div class="f-row"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(814) 555-0100" required></div>
             <div class="f-row"><label for="business_type">Business Type</label>
               <select id="business_type" name="business_type">
                 <option value="">Select one...</option>
