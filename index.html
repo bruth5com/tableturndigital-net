@@ -384,6 +384,7 @@
   </section>
 
   
+<section id="ai-receptionist" aria-labelledby="ai-heading" style="background:#1a2639;color:#F5F2ED;padding:60px 24px"><div style="max-width:1100px;margin:auto"><p style="color:#C9A84C;font-weight:700">FOR CONTRACTORS WHO CANNOT ALWAYS ANSWER</p><h2 id="ai-heading" style="color:white">On a roof? Give the next caller a way to reach you.</h2><p>An AI phone agent can answer common questions and collect callback details using information you approve. We scope the setup around your business, your hours and your follow-up process.</p><p>Start with a tailored demonstration. Setup, usage costs, handoff rules and monthly service are confirmed before you buy. No insurance decisions, emergency-response promises or guaranteed bookings.</p><a href="/ai-phone-agents-contractors.html" style="color:#fff;text-decoration:underline;font-weight:700">See how an AI phone agent could fit your business →</a></div></section>
   <section id="review-boost" style="background:var(--cream);" aria-labelledby="rb-heading">
     <div class="section-inner">
       <div class="services-header">
@@ -391,18 +392,18 @@
           <p class="section-eyebrow">New Service</p>
           <h2 class="section-title" id="rb-heading">Get Found. Get Chosen. <em style="font-style:italic;color:var(--warm);">Review Boost.</em></h2>
         </div>
-        <p class="section-sub">A steady stream of real five star Google reviews, on autopilot. More reviews push you higher on the local map, and higher on the map means more calls from customers ready to hire.</p>
+        <p class="section-sub">Make it easier to request honest feedback from your customers. Reviews help prospective customers learn about your business. No rating or search position is guaranteed.</p>
       </div>
       <div class="services-grid">
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">&#11088;</span>
-          <h3>More Reviews, Higher Rank</h3>
-          <p>Google leans on your review count and rating to decide who lands at the top of the map. We close the gap between you and the busiest shops in town.</p>
+          <h3>Make Honest Feedback Easier</h3>
+          <p>Real customer feedback helps people evaluate your business. We help organize review requests and follow-up, without promising a particular rating or ranking.</p>
         </div>
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">&#128260;</span>
           <h3>Set It and Forget It</h3>
-          <p>We ask your happy customers for a review right after the job, and quietly catch any unhappy ones in private first. About ten minutes of your month, that is all.</p>
+          <p>Invite customers to share honest reviews regardless of whether their experience was positive or negative. Private feedback is welcome too, without blocking anyone from leaving a public review.</p>
         </div>
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">&#128203;</span>
@@ -555,6 +556,7 @@
                 <option>Buy Local Leads</option>
                 <option>New Website Design</option>
                 <option>Local SEO Help</option>
+                <option>AI Phone Agent Demonstration</option>
                 <option>All of the Above</option>
                 <option>Not Sure Yet, Just Exploring</option>
               </select>
@@ -600,25 +602,25 @@
       <h2 class="networks-title" id="networks-heading">We Also Operate Local Lead Sites Across NW Pennsylvania</h2>
       <p class="networks-sub">Homeowners across Venango, Crawford, Warren and surrounding counties use our niche lead sites to connect with trusted local contractors.</p>
       <div class="networks-grid">
-        <a href="https://nwpa-roofing-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+        <a href="https://nwpa-roofing-quotes.net" target="_blank" rel="noopener" class="network-card">
           <span class="network-icon" aria-hidden="true">🏠</span>
           <h3>Roofing Leads</h3>
           <p>Storm damage, roof replacement, leak repair.</p>
           <p class="network-cta">Visit Site →</p>
         </a>
-        <a href="https://nwpa-hvac-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+        <a href="https://nwpa-hvac-quotes.net" target="_blank" rel="noopener" class="network-card">
           <span class="network-icon" aria-hidden="true">🌡️</span>
           <h3>HVAC Leads</h3>
           <p>Furnace repair, AC installation, emergency service.</p>
           <p class="network-cta">Visit Site →</p>
         </a>
-        <a href="https://nwpa-landscaping-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+        <a href="https://nwpa-landscaping-quotes.net" target="_blank" rel="noopener" class="network-card">
           <span class="network-icon" aria-hidden="true">🌿</span>
           <h3>Landscaping Leads</h3>
           <p>Lawn care, tree removal, snow removal.</p>
           <p class="network-cta">Visit Site →</p>
         </a>
-        <a href="https://nwpa-construction-quotes.netlify.app" target="_blank" rel="noopener" class="network-card">
+        <a href="https://nwpa-construction-quotes.net" target="_blank" rel="noopener" class="network-card">
           <span class="network-icon" aria-hidden="true">🔨</span>
           <h3>Contracting &amp; Handyman</h3>
           <p>Decks, siding, remodeling, handyman services.</p>
@@ -654,6 +656,7 @@ document.querySelectorAll('form[data-thank-you]').forEach(function (form) {
     try {
       const response = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{ Accept:'application/json' } });
       if (!response.ok) throw new Error('Submission failed');
+      try { sessionStorage.setItem('ttd_lead_confirmed','1'); } catch (_) {}
       window.location.assign(form.dataset.thankYou);
     } catch (error) {
       if (button) { button.disabled = false; button.textContent = 'Send Message →'; }
@@ -663,5 +666,6 @@ document.querySelectorAll('form[data-thank-you]').forEach(function (form) {
 });
 </script>
 
+<script src="/lead-tracking.js" defer></script>
 </body>
 </html>
